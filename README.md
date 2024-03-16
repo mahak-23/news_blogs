@@ -1,6 +1,6 @@
 # news_blogs
 
-## DailyNews [Live]()
+## DailyNews [Live](https://daily-news-blogs.netlify.app/)
 DailyNews is a web application that allows users to fetch top headlines from various news sources.
 
 ## Introduction
