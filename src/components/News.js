@@ -3,6 +3,7 @@ import NewsItem from "./NewsItem";
 import { getNewsList } from "../actions/app";
 import Spinner from "./Spinner";
 import InfiniteScroll from "react-infinite-scroll-component";
+import sampleData from "../utils/SampleOutput.json";
 
 export class News extends Component {
   constructor() {
@@ -36,6 +37,7 @@ export class News extends Component {
       this.setState({
         loading: false,
         error: parsedData.message,
+        articles: [...sampleData.articles],
       });
     } else {
       this.setState({
@@ -70,8 +72,20 @@ export class News extends Component {
         {loading ? (
           <Spinner />
         ) : error ? (
-          <div className="text-center" style={{ color: "red" }}>
-            {error}
+          <div className="container">
+            <div className="text-center" style={{ color: "red" }}>
+              {error}
+            </div>
+            <h4 className="text-center">Here are some examples of news</h4>
+            <div className="container d-flex">
+              <div className="row">
+                {articles.map((element, index) => (
+                  <div className="col-md-4" key={index}>
+                    <NewsItem newsData={element} />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         ) : articles.length !== 0 ? (
           <InfiniteScroll
