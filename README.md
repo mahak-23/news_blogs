@@ -16,7 +16,7 @@ DailyNews provides users with a convenient way to stay updated with the latest n
 
 ## Technologies Used
 
-- React.js: Frontend framework for building the user interface.
+- React.js: Frontend framework for building the user interface. (Class components)
 - React Router: Library for declarative routing within the React application.
 - React Infinite Scroll Component: Component for implementing infinite scrolling.
 - Bootstrap: Frontend framework for styling the application and creating responsive layouts.
